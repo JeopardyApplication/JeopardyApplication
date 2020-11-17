@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +13,168 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.game-board-background {
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.game-board-background {
+  margin: auto;
+  filter: drop-shadow(0.4rem 0.4rem 0.45rem rgba(0, 0, 30, 0.5));
+  background-size: contain;
+  width: 90vw;
+  height: 90vh;
+  background-repeat: no-repeat;
+
+  background-image: url('./assets/jeopardyBackground.jpg');
+  background-position: center;
+}
+
+.dashboard-controls {
+  background-color: seashell;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.main-game-board {
+  min-width: 80vw;
+}
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.row {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+
+.row-reverse {
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.row-reverse li {
+  background: gold;
+}
+
+.column {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  float: left;
+}
+.column li {
+  background: #2b1de6;
+  min-width: 10vw;
+  min-height: 5vh;
+  font-size: 2vw;
+
+  /* overflow: hidden; */
+}
+
+.column-reverse {
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+  float: right;
+}
+.column-reverse li {
+  background: lightgreen;
+}
+
+.flex-item-header {
+  background: tomato;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  text-shadow: 1px 1px black;
+  color: white;
+  font-weight: bold;
+  font-size: 0.5em !important;
+  text-align: center;
+}
+
+.flex-item {
+  background: tomato;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  text-shadow: 1px 1px black;
+  line-height: 50px;
+  color: #fff134;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item-flaged {
+  background: tomato;
+  opacity: 0.2;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  text-shadow: 1px 1px black;
+  line-height: 50px;
+  color: #fff134;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+/* ////////////////////////////////////////////////////// */
+
+#modal {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal:empty {
+  display: none;
+}
+
+#modal > div {
+  background-color: white;
+  max-width: 500px;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#modal .buttons button {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+#modal button,
+.details button {
+  background-color: #ad343e;
+  padding: 5px 25px;
+  color: white;
+  font-size: 18px;
+  border: #333 1px solid;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
 }
